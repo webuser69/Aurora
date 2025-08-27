@@ -73,7 +73,7 @@ async function send() {
 
   const reply = await MsgtoServer(msg); // Aurora reply 
   addmsg(reply, "aurora");
-  if(!Mute) speak(reply);
+  //if(!Mute) speak(reply);
 }
 
 // Enter button

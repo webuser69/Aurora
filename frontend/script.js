@@ -109,3 +109,10 @@ function voice() {
     input.placeholder = "Send a message..."; // RESET even if user stops speaking
   };
 }
+
+// text to speak
+function speak(text) {
+  const audio = new SpeechSynthesisUtterance(text);
+  audio.lang = "en-US";
+  speechSynthesis.speak(audio);
+}

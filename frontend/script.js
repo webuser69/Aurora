@@ -73,7 +73,7 @@ async function send() {
 
   const reply = await MsgtoServer(msg); // Aurora reply 
   addmsg(reply, "aurora");
-  if(!Mute) speak(reply);
+  // if(!Mute) speak(reply);
 }
 
 // Enter button
@@ -110,9 +110,3 @@ function voice() {
   };
 }
 
-// text to speak
-function speak(text) {
-  const audio = new SpeechSynthesisUtterance(text);
-  audio.lang = "en-US";
-  speechSynthesis.speak(audio);
-}

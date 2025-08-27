@@ -50,7 +50,7 @@ function addmsg(text, sender) {
 // Sending message to backend 
 async function MsgtoServer(msg) {
   try{
-     const res = await fetch("http://localhost:5500/message", {
+     const res = await fetch("/message", {   // UPDATED ✅
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message: msg, Mute })
@@ -59,7 +59,7 @@ async function MsgtoServer(msg) {
     const { response } = await res.json();
     return response;
   }catch{
-    return "Server error. try gain";
+    return "Server error. try again";
   }
 }
 

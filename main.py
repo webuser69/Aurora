@@ -3,6 +3,7 @@ from flask_cors import CORS
 import re
 import random
 import wikipedia
+import os  # NEW
 
 # Import your existing modules
 from open_task import open_web, open_app, close_app
@@ -102,4 +103,5 @@ def message():
 
 # ---------------- RUN SERVER ---------------- #
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5500)
+    port = int(os.environ.get("PORT", 5000))  # Render provides PORT
+    app.run(host="0.0.0.0", port=port)

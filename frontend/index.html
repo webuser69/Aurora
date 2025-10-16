@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        
+        <title>Aurora</title>
+        
+        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div id="toprow">
+            <strong>Aurora</strong>
+            <div>
+                <button id="Mute" onclick="mute()">🔊</button>
+                <button id="Theme" onclick="theme()">🌙</button>
+            </div>
+        </div>
+
+        <div id="container"></div>
+
+        <div id="inputArea">
+            <button class="add-file" onclick="menu()">➕</button>
+            
+            <div class="input">
+                <input type="textbox" id="input" placeholder="Send a message..." autocomplete="off"/>
+                <button class="snd-btn" onclick="send()">➤</button>
+            </div>
+
+                <button class="mic-btn" onclick="voice()">🎙️</button>
+            
+            <div id="Menu">
+                <button onclick="takePhoto()">📷 Take Photo</button>
+                <button onclick="addPhoto()">🖼️ Add Photo</button>
+                <button onclick="addFile()">📁 Add File</button>
+            </div>
+        </div>
+    </body>
+</html>

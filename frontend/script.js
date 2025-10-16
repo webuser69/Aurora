@@ -50,7 +50,7 @@ function addmsg(text, sender) {
 // Sending message to backend 
 async function MsgtoServer(msg) {
   try{
-     const res = await fetch("http://localhost:5500/message", {
+     const res = await fetch("/message", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message: msg, Mute })
